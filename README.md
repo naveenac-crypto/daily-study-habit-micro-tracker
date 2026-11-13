@@ -1,43 +1,116 @@
-# DailyTrack — Daily Study & Habit Micro-Tracker
-25CS208 Web Technology | IA-3 | Student name/register number: TO COMPLETE
+# Daily Study & Habit Micro-Tracker
 
-## Start here
-1. Extract this package into a normal folder.
-2. Open the website folder in VS Code. Use Live Server to open index.html.
-3. Choose Open dashboard — no login. Use fictional demonstration information.
-4. Add three habits; tick one. Expected progress: 33%. Tick all: 100%.
-5. For a quick real timer demonstration choose focus 1 minute and break 1 minute, Apply, Start, and wait for completion. One full focus session is logged; a break never counts as study time. Never shorten a countdown secretly and describe it as a full session.
-6. Keep the same browser/profile/origin for persistence. Export JSON before clearing data.
+## Project Overview
+DailyTrack is a browser-based dashboard for tracking daily habits,
+study routines, focus sessions, and consecutive active days.
 
-## Assessment forms
-Registration and sign-up are OPTIONAL VALIDATION DEMOS: they do not create accounts or save passwords. Dashboard requires no login. This deliberate boundary preserves the topic's no-login requirement but may require faculty confirmation for FR-03's account-creation wording. Do not represent these forms as real authentication.
-Demo signin: demo@example.com / Demo@123.
-Test registration: Student Demo / URK26CS001 / student@example.com / 9876543210 / CSE / Demo@123 (twice).
+The main dashboard works without registration or login.
+Records are stored locally in the browser.
 
-## Features and definitions
-Habits repeat from their local-calendar creation day. Past-day entry is allowed; future checklist dates are not. Edit changes the habit label globally. Archive ends the habit from the selected day; earlier history stays, while later completions for that habit are removed after confirmation.
-Progress: completed applicable habits / all applicable habits × 100, rounded. With no habits: 0%.
-Active day: at least one checked habit OR completed focus session. Streak counts consecutive active calendar days through today, or through yesterday when today is not active. It resets after a missed day. This is not an all-habits-completed streak. Unchecking or archiving can change history and streak. No fabricated history is preloaded.
-Timer: custom work 1–180 and break 1–60 whole minutes. setInterval refreshes a timestamp-derived remaining value. Pause retains remaining time; reset discards partial time. No automatic next-phase start. Completed work logs for the local day when completion is detected, even if the tab was delayed across midnight. Reload abandons the timer, not stored habits/session history. Timer state is NOT persisted. A best-effort tab ownership lock reduces duplicate timers but does not provide atomic cross-tab concurrency. Use one active tracker tab, especially when editing or importing.
+## Course Details
+- Course: Web Technology
+- Course Code: 25CS208
+- Assessment: IA-3 Microproject
+- Academic Year: 2026–2027
 
-## Privacy boundaries
-This code makes no application API/analytics calls. Static hosting still receives ordinary requests. Local records are NOT encrypted, NOT protected by accounts, NOT cloud-backed, and can be read by others using the browser profile. Browser or device time changes affect dates, streaks and deadlines. No notification permission, sound alarm or offline install/service worker is included. Offline access from the deployed site is not guaranteed.
+## Student Details
+- Name: Naveen Ac
+- Register Number: URK26CS1224
+- Batch: B4
+- Faculty: DR. I Titus
 
-## Verification status
-JavaScript syntax checked using node --check. HTML unique IDs and referenced local asset inclusion checked. No interactive browser, physical-device, accessibility or deployment tests have been performed here. TEST-PLAN.csv starts NOT RUN. Test before submitting. Do not claim industry security or a 100% checklist pass.
+## Live Website
+[PASTE THE NEW DAILYTRACK VERCEL WEBSITE LINK HERE]
 
-## GitHub + Vercel
-Create a NEW repository for this friend/project. Upload all website files individually, with index.html at repository root. Include README; exclude personal backups, secrets and signed documents. Use genuine commit messages. Do not reuse the expense-tracker repository or links.
-Import that repository into a new Vercel project as a static/Other project, no build command. Verify the actual assigned URL and all five .html pages. If using drag/drop, upload the extracted website files, not an extra wrapping folder.
-Replace LIVE_URL and REPO_URL in your documents only after creation. No deployment or repository is created by this package.
-QR codes require the actual final URLs. Scan both before recording.
+## GitHub Repository
+https://daily-study-habit-micro-tracker.vercel.app
 
-## Files
-index/register/signup/signin/home.html: five pages.
-styles.css/layout.css: shared visual system and Grid/Flexbox.
-app.js: habits, calendar records, progress, streak and backups.
-timer.js: Pomodoro and completed-session logging.
-validation.js/theme.js/calculator.js/chatbot.js: assessment modules.
+## Main Features
+- Create and edit recurring daily habits
+- Mark habits completed for a selected day
+- Archive habits while retaining earlier history
+- View daily completion percentage and progress bar
+- Use a Pomodoro timer with custom focus and break intervals
+- Review completed focus sessions and daily focus minutes
+- Track consecutive active days
+- Save records using browser LocalStorage
+- Export and restore JSON backups
+- Switch between light and dark themes
+- Use the responsive desktop and mobile dashboard
+- Access an arithmetic calculator and study-time estimator
+- Ask the keyword-based help chatbot about the application
 
-## Academic use
-AI-assisted starter. Student must review, adapt, test, explain actual contributions and follow institutional AI policy. Do not claim unaided authorship, fabricated tests, fake history or signatures.
+## Technologies
+- HTML5
+- CSS3
+- CSS Grid and Flexbox
+- JavaScript
+- LocalStorage
+- GitHub
+- Vercel
+
+## Progress Calculation
+Progress is the number of completed applicable habits divided by
+the total applicable habits for the selected day, multiplied by 100
+and rounded.
+
+With no habits, progress is 0%.
+
+## Streak Rule
+A day is active when at least one habit or one full focus session
+is completed.
+
+The streak counts consecutive active local-calendar days through
+today. If today is not active yet, it counts back from yesterday.
+A missed day breaks the streak.
+
+## Timer Behaviour
+- Focus and break intervals can be customised.
+- Pause preserves the remaining time.
+- Reset discards the incomplete interval.
+- Only completed focus intervals are recorded.
+- Breaks do not count as study time.
+- The next interval starts only when Start is pressed.
+- Reloading resets an unfinished timer without recording completion.
+
+## Assessment Form Demonstrations
+Registration, sign-up, and sign-in pages demonstrate client-side
+validation for the course assessment.
+
+They do not create real accounts or save passwords.
+The tracker itself does not require login.
+
+Fictional demo sign-in:
+- Email: demo@example.com
+- Password: Demo@123
+
+These are public demonstration credentials, not a real account.
+
+## Run Locally
+1. Download or clone this repository.
+2. Open the folder containing index.html in VS Code.
+3. Run index.html using Live Server.
+4. Open the dashboard.
+
+## Privacy and Limitations
+- Habit records are stored in the browser, not an application database.
+- Records are not encrypted or automatically synchronised.
+- Clearing browser/site data may remove records.
+- Export a JSON backup before clearing data.
+- Hosting providers still receive normal website requests.
+- The chatbot uses keyword matching, not a trained AI model.
+- Use one active tracker tab to reduce conflicting changes.
+- No bank connection, external AI service, or analytics script is included.
+
+## Testing Status
+JavaScript syntax and local HTML asset references were checked
+during preparation.
+
+Browser, device, persistence, backup, and timer tests must be
+recorded in TEST-PLAN.csv. Only mark tests passed after observing
+the results.
+
+## Development Note
+AI assistance was used to prepare the starter implementation
+and documentation. The submitting student must review, adapt,
+test, and explain the project and describe actual contributions.
