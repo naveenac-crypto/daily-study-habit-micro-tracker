@@ -1,0 +1,3 @@
+JavaScript syntax: node --check passed for six JavaScript files.
+HTML duplicate-ID and local script/stylesheet reference checks passed for five HTML pages.
+These are static checks, not proof of browser functionality. All interactive tests are NOT RUN.
