@@ -20,10 +20,10 @@ Records are stored locally in the browser.
 - Faculty: DR. I Titus
 
 ## Live Website
-[PASTE THE NEW DAILYTRACK VERCEL WEBSITE LINK HERE]
+https://daily-study-habit-micro-tracker.vercel.app
 
 ## GitHub Repository
-https://daily-study-habit-micro-tracker.vercel.app
+https://github.com/naveenac-crypto/daily-study-habit-micro-tracker.git
 
 ## Main Features
 - Create and edit recurring daily habits
